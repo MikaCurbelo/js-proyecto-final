@@ -1,37 +1,14 @@
-/* function saludar(nombre){
+ function saludar(nombre){
     let saludo = "Hola " + nombre;
     alert(saludo)
 }
 let nombre = prompt("Ingresa tu nombre");
 saludar(nombre)
 
-let respuesta = prompt("¿Conoces algun tema de nuestro ep?") 
 
-if(respuesta == "si"){
-    let tema = prompt("¿Cuál es?");
-    if(tema === "Disfraz" || tema === "disfraz"){
-        alert("Ingresaste " + tema +", entra a la pagina y conoce más sobre la banda.");
-    }else if(tema === "Mi verdad" ||tema === "mi verdad"){
-        alert("Ingresaste " + tema +", entra a la pagina y conoce más sobre la banda.");
-    }else if(tema === "Mochilero"||tema === "mochilero"){
-        alert("Ingresaste " + tema +", entra a la pagina y conoce más sobre la banda.");
-    }else if(tema === "Arde"||tema === "arde"){
-        alert("Ingresaste " + tema +", entra a la pagina y conoce más sobre la banda.");
-    }else if(tema === "Realidad"||tema === "realidad"){
-        alert("Ingresaste " + tema +", entra a la pagina y conoce más sobre la banda.");
-    }else{
-        alert("Ese tema no es nuestro");
-    }
-}
-else{
-    alert("No pasa nada, ingresa a la pagina y conoce sobre nosotros")
-} */
+let respuesta1 = prompt("¿Sabes cómo se llaman los cinco temas de nuestro EP?")
 
-/* DESAFIO COMPLEMENTARIO AGREGAR ARRAYS */
-
-let respuesta = prompt("Conoces alun trema de Por un Día?")
-
-if(respuesta === "si" || respuesta === "Si"){
+if(respuesta1 === "si" || respuesta1 === "Si"){
    
 const temasDeLaBanda = [];
 let   cantidad     = 5;
@@ -44,15 +21,24 @@ do{
 const lista = temasDeLaBanda.concat(["Esta lista no queda acá, este año grabaremos muchos más!!!"]);
 alert(lista.join("\n"));
 }else{
-    alert("No pasa nada, ingresa y conocenos")
+    alert("No pasa nada, ingresa y conocelos")
 }
 
+let respuesta2 = prompt("De los temas que conoces o has escuchado ¿Cuál es el tema que mas te gustó?") 
 
+if(respuesta2 == "disrfaz"||"arde"||"mi verdad"||"realidad"||"mochilero"||"Disrfaz"||"Arde"||"Mi verdad"||"Realidad"||"Mochilero"){
+    alert("te ha gustado " + respuesta2);
+}else{
+    alert("Ese tema no es nuestro")
+} 
 
+const infoTema = [
+    {nombre: "Mi verdad", duracion: 3.35},
+    {nombre: "Disfraz", duracion: 5.04},
+    {nombre: "Mochilero", duracion: 4.48},
+    {nombre: "Realidad", duracion: 4.45},
+    {nombre: "Arde", duracion: 4.32},
+]
 
-
-
-
-
-
-
+const duracionDelEp = infoTema.reduce((acumulador, elemento) => acumulador + elemento.duracion, 0)
+alert("escuchar el ep solo te tomará " + Math.ceil(duracionDelEp) + " minutos, clikea en el logo del EP" );
