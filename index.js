@@ -26,7 +26,7 @@ alert(lista.join("\n"));
 
 let respuesta2 = prompt("De los temas que conoces o has escuchado ¿Cuál es el tema que mas te gustó?") 
 
-if(respuesta2 == "disrfaz"||"arde"||"mi verdad"||"realidad"||"mochilero"||"Disrfaz"||"Arde"||"Mi verdad"||"Realidad"||"Mochilero"){
+if(respuesta2 == "disrfaz"||respuesta2 == "arde"||respuesta2 == "mi verdad"||respuesta2 == "realidad"||respuesta2 == "mochilero"||respuesta2 == "Disrfaz"||respuesta2 == "Arde"||respuesta2 == "Mi verdad"||respuesta2 == "Realidad"||respuesta2 == "Mochilero"){
     alert("te ha gustado " + respuesta2);
 }else{
     alert("Ese tema no es nuestro")
