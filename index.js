@@ -42,3 +42,14 @@ const infoTema = [
 
 const duracionDelEp = infoTema.reduce((acumulador, elemento) => acumulador + elemento.duracion, 0)
 alert("escuchar el ep solo te tomará " + Math.ceil(duracionDelEp) + " minutos, clikea en el logo del EP" );
+
+let  form = document.getElementById("formulario");
+
+form.addEventListener("submit", validar);
+
+function validar(e) {
+ e.preventDefault();
+
+ console.log(e);
+}
+
