@@ -1,4 +1,4 @@
- function saludar(nombre){
+function saludar(nombre){
     let saludo = "Hola " + nombre;
     alert(saludo)
 }
@@ -33,23 +33,37 @@ if(respuesta2 == "disrfaz"||respuesta2 == "arde"||respuesta2 == "mi verdad"||res
 } 
 
 const infoTema = [
-    {nombre: "Mi verdad", duracion: 3.35},
-    {nombre: "Disfraz", duracion: 5.04},
-    {nombre: "Mochilero", duracion: 4.48},
-    {nombre: "Realidad", duracion: 4.45},
-    {nombre: "Arde", duracion: 4.32},
+    {id:1, nombre: "Mi verdad", duracion: 3.35},
+    {id:2, nombre: "Disfraz", duracion: 5.04},
+    {id:3, nombre: "Mochilero", duracion: 4.48},
+    {id:4, nombre: "Realidad", duracion: 4.45},
+    {id:5, nombre: "Arde", duracion: 4.32},
 ]
 
-const duracionDelEp = infoTema.reduce((acumulador, elemento) => acumulador + elemento.duracion, 0)
+
+
+ const duracionDelEp = infoTema.reduce((acumulador, elemento) => acumulador + elemento.duracion, 0)
 alert("escuchar el ep solo te tomará " + Math.ceil(duracionDelEp) + " minutos, clikea en el logo del EP" );
 
-let  form = document.getElementById("formulario");
+let  form = document.getElementById("btnSend");
 
-form.addEventListener("submit", validar);
+form.addEventListener("click", validar);
+
 
 function validar(e) {
  e.preventDefault();
-
+    alert("validó");
  console.log(e);
-}
+} 
+
+let temas = document.getElementById("temas");
+temas.innerHTML = "<h4>Lista de canciones</h4> <p>1- Mochilero <br> 2- Disfraz <br> 3- Mi verdad <br> 4- Realidad <br> 5- Arde(Vivo)</p>"
+                   
+const enLStorage = JSON.stringify(infoTema);
+console.log(enLStorage);
+localStorage.setItem("ListaDeTemas", enLStorage);
+
+const recuperarLista = localStorage.getItem("ListaDeTemas");
+console.log(JSON.parse(recuperarLista));
+
 
