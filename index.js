@@ -1,36 +1,3 @@
-function saludar(nombre){
-    let saludo = "Hola " + nombre;
-    alert(saludo)
-}
-let nombre = prompt("Ingresa tu nombre");
-saludar(nombre)
-
-
-let respuesta1 = prompt("¿Sabes cómo se llaman los cinco temas de nuestro EP?")
-
-if(respuesta1 === "si" || respuesta1 === "Si"){
-   
-const temasDeLaBanda = [];
-let   cantidad     = 5;
-
-do{
-   let entrada = prompt("Ingresar nombre");
-   temasDeLaBanda.push(entrada);
-   console.log(temasDeLaBanda.length);
-}while(temasDeLaBanda.length != cantidad)
-const lista = temasDeLaBanda.concat(["Esta lista no queda acá, este año grabaremos muchos más!!!"]);
-alert(lista.join("\n"));
-}else{
-    alert("No pasa nada, ingresa y conocelos")
-}
-
-let respuesta2 = prompt("De los temas que conoces o has escuchado ¿Cuál es el tema que mas te gustó?") 
-
-if(respuesta2 == "disrfaz"||respuesta2 == "arde"||respuesta2 == "mi verdad"||respuesta2 == "realidad"||respuesta2 == "mochilero"||respuesta2 == "Disrfaz"||respuesta2 == "Arde"||respuesta2 == "Mi verdad"||respuesta2 == "Realidad"||respuesta2 == "Mochilero"){
-    alert("te ha gustado " + respuesta2);
-}else{
-    alert("Ese tema no es nuestro")
-} 
 
 const infoTema = [
     {id:1, nombre: "Mi verdad", duracion: 3.35},
@@ -41,24 +8,61 @@ const infoTema = [
 ]
 
 
+let temas = document.getElementById("temas");
+temas.innerHTML = "<h4 class=titulo2 >Lista de canciones</h4> <p class=borderNone>1- Mochilero <br> 2- Disfraz <br> 3- Mi verdad <br> 4- Realidad <br> 5- Arde(Vivo)</p>"
 
- const duracionDelEp = infoTema.reduce((acumulador, elemento) => acumulador + elemento.duracion, 0)
-alert("escuchar el ep solo te tomará " + Math.ceil(duracionDelEp) + " minutos, clikea en el logo del EP" );
+ 
+   let tema1 = document.getElementById('mochilero'); 
+   tema1.addEventListener('click', presionar1); 
 
-let  form = document.getElementById("btnSend");
-
-form.addEventListener("click", validar);
-
-
-function validar(e) {
- e.preventDefault();
-    alert("validó");
- console.log(e);
+function presionar1() { 
+   let moch = document.getElementById('moch'); 
+   moch.play(); 
 } 
 
-let temas = document.getElementById("temas");
-temas.innerHTML = "<h4>Lista de canciones</h4> <p>1- Mochilero <br> 2- Disfraz <br> 3- Mi verdad <br> 4- Realidad <br> 5- Arde(Vivo)</p>"
-                   
+
+   let tema2 = document.getElementById('disfraz'); 
+   tema2.addEventListener('click', presionar2); 
+
+function presionar2() { 
+   let dis = document.getElementById('dis'); 
+  dis.play(); 
+} 
+   let tema3 = document.getElementById('miVerdad'); 
+   tema3.addEventListener('click', presionar3); 
+
+function presionar3() { 
+   let miVer = document.getElementById('miV'); 
+   miVer.play(); 
+} 
+   let tema4 = document.getElementById('realidad'); 
+   tema4.addEventListener('click', presionar4); 
+
+function presionar4() { 
+   let real = document.getElementById('real'); 
+   real.play(); 
+} 
+   let tema5 = document.getElementById('arde'); 
+   tema5.addEventListener('click', presionar5); 
+
+function presionar5() { 
+   let ard = document.getElementById('ard'); 
+   ard.play(); 
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const enLStorage = JSON.stringify(infoTema);
 console.log(enLStorage);
 localStorage.setItem("ListaDeTemas", enLStorage);

@@ -1,0 +1,59 @@
+// COLORES
+
+$paleta:(
+	'uno': rgba(116,187,33, 1.0),
+	'dos': rgba(116,187,33, .9),
+ 	'tres': rgba(219, 223, 250, 1.0),
+ 	'cuatro': rgba(236, 219, 74, 1.0),
+ 	'cinco': black,);
+
+
+
+
+//Sizing
+$w-100:100%;
+$w-75:75%;
+$w-50:50%;
+$w-25:25%;
+
+@mixin textos($line-height, $font-size, $color){
+	line-height: line-height;
+	font-size: font-size;
+	color: $color;
+	width: 80%;
+	height: auto;
+	border: double 4px map-get($map:$paleta,$key:'uno');
+	padding: 15px;
+	margin-top: 150px;
+	margin-left: 50px;
+	font-weight: 400;
+}
+
+.textoInt{
+	@include textos(1em, 1.4em, map-get($map:$paleta,$key:'tres'))
+}
+
+@mixin titulo($text-align, $color, $font-size, $font-family){
+	text-align: $text-align;
+	color: $color;
+	font-size: $font-size;
+	font-family: $font-family;
+}
+
+.titulo{
+	@include titulo(center, map-get($map:$paleta,$key:'uno'), $text1, $fontTitulo)
+}
+
+.titulo2{
+	@extend .titulo;
+	font-size: $text2;
+}
+
+.titulo3{
+	@extend .titulo;
+	font-size: $text3;
+}
+
+.botonera-collapse{
+	background-color: map-get($map:$paleta,$key:'uno');
+}

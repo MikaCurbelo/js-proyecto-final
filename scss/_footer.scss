@@ -1,0 +1,9 @@
+footer{
+	
+	img{
+		&:hover{
+			transform: scale(1.5);
+			transition: 2s;
+		}
+	}
+}

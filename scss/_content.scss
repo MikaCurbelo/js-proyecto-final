@@ -1,0 +1,126 @@
+#contenido{
+	h1{
+		margin-top: 80px;
+		margin-left: 10px;
+	}
+	img{
+		width: 80%;
+		margin-top: 50px;
+		margin-left: 100px;
+		margin-right: 50px;
+		&:hover{
+			transform: skew(5deg);
+			transition: 2s;
+			cursor: pointer;
+		}
+	}
+	p{
+		color: map-get($map:$paleta,$key:'tres');
+		font-family: $fontPpal;
+		font-size: $text4;
+		font-weight: 600;
+		line-height: 2em;
+		width: 80%;
+		height: auto;
+		border: double 4px map-get($map:$paleta,$key:'dos');
+		padding: 15px;
+	}
+	h3{
+		margin-top: 50px;
+	}
+	textarea{
+		margin-top: 100px;
+	}
+	a[href="404.HTML"]{
+		background: map-get($map:$paleta,$key:'dos');
+		padding: 10px 30px;
+		border-radius: 30px;
+		border: none;
+    	text-decoration: none;
+    	color: map-get($map:$paleta,$key:'cinco');
+	}
+	img{
+		width: 80%;
+		margin-top: 10px;
+		margin-left: 100px;
+	}
+}
+
+#contenidoHistoria{
+	
+	img{
+		width: 100%;
+		margin-top: 50px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+
+	img{
+		width: 100%;
+		margin-top: 50px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}	
+
+	img{
+		width: 100%;
+		margin-top: 50px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+
+	p{
+		width: 100%;
+		font-family: $fontPpal;
+		color: map-get($map:$paleta,$key:'tres');
+		font-size: $text4;
+		border: double 4px map-get($map:$paleta,$key:'dos');
+		padding: 10px;
+		line-height: 2em;
+		height: auto;
+		width: 80%;
+		margin-left: 20px;
+		&:first-letter{
+		color: map-get($map:$paleta,$key:'tres');
+		font-size: $text2;
+		font-weight: 600;
+		}
+	}
+}
+
+#contenidoFechas{
+	img{
+		width: 100%;
+		margin-top: 50px;
+		margin-left: 40px;
+		margin-right: 40px;
+	}
+	ul{
+		background-color: map-get($map:$paleta,$key: 'cuatro');
+		border: double 4px map-get($map:$paleta,$key:'cinco'); 
+		padding: 5px 5px;
+		width: $w-50;
+		margin-top: 100px;
+		margin-left: 50px;
+		li{
+			font-size: $text3;
+			font-family: $fontTitulo;
+		}
+	}
+}
+
+
+#contenidoIntegrantes{
+	img{
+		margin-top: 50px;
+		margin-left: 100px;
+		margin-right: 50px;
+	}
+}
+
+#contenidoGaleria{
+	img{
+		height: 400px;
+	}
+}
+
