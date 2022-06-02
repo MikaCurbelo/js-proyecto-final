@@ -1,0 +1,7 @@
+[
+    {"id":2, "nombre": "Disfraz", "duracion": 5.04},
+    {"id":1, "nombre": "Mi verdad", "duracion": 3.35},
+    {"id":3, "nombre": "Mochilero", "duracion": 4.48},
+    {"id":4, "nombre": "Realidad", "duracion": 4.45},
+    {"id":5, "nombre": "Arde", "duracion": 4.32}
+]
