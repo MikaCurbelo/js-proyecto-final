@@ -3,6 +3,8 @@
 let temas = document.getElementById("temas");
 temas.innerHTML = "<h4 class=titulo2 >Lista de canciones</h4> <p class=borderNone>1- Mochilero <br> 2- Disfraz <br> 3- Mi verdad <br> 4- Realidad <br> 5- Arde(Vivo)</p>"
 
+let musica = document.getElementById("musica");
+musica.innerHTML = "<h5 class=titulo2> Escuha un poco </h5>"
 //  TEMA 1
    let tema1Pl = document.getElementById('mochileroPl'); 
    tema1Pl.addEventListener('click', presionar1); 
@@ -100,6 +102,56 @@ fetch('./data.json')
    const recuperarLista = localStorage.getItem("ListaDeTemas");
    console.log(JSON.parse(recuperarLista));
 
+})
+
+const listaSuscriptores = ["Suscriptores", ];
+
+
+const btnSend = document.getElementById("btnSend")
+btnSend.addEventListener('click', () =>{
+
+let nombre = document.getElementById("nombre").value;
+if(nombre.length == 0) {
+   Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Escribe un monbre válido',
+      backdrop: `
+      rgba(255,0,0,0.4)`
+    })
+   return;
+ }
+ let correo = document.getElementById("correo").value;
+ if (correo.length < 6) {
+   Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Escribe un correo válido',
+      backdrop: `
+      rgba(255,0,0,0.4)`
+    })
+   return;
+ }
+
+
+   const nombreSus = document.getElementById("nombre").value;
+   const correoSus = document.getElementById("correo").value;
+   listaSuscriptores.push(correoSus);
+   listaSuscriptores.push(nombreSus);
+   console.log(listaSuscriptores);
+
+
+
+   Swal.fire({
+      title: 'Te has suscripto correctamente',
+      width: 600,
+      padding: '3em',
+      color: '#716add',
+      backdrop: `
+      rgba(116,187,33,0.3)`
+    })
+
+    
 })
 
 
